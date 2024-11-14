@@ -384,7 +384,22 @@ var Events = {
 /**
  * Wrapper for the Slide section.
  */
-
+const sections = [
+  "Home",
+  "BIO",
+  "Agenda",
+  "Introduction",
+  "Dataset",
+  "EDA",
+  "Model",
+  "Prediction UI",
+  "Stakeholder",
+  "Recommendation",
+  "Future Work",
+  "Conclusion",
+  "Questions",
+  "Thanks"
+];
 var Slide = function () {
   /**
    * Bootstraps the slide by saving some data, adding a class and hiding it.
@@ -413,6 +428,8 @@ var Slide = function () {
 
     // Hide slides by default
     this.hide();
+    //console.log('From this Page: ' + i)
+    //document.getElementById("spCurrentslide").textContent = ;
   }
 
   /**
@@ -985,7 +1002,7 @@ var WebSlides = function () {
     key: 'goToSlide',
     value: function goToSlide(slideI) {
       var forward = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
-
+      console.log(slideI);
       if (this.isValidIndexSlide_(slideI) && !this.isMoving && this.currentSlideI_ !== slideI) {
         this.isMoving = true;
         var isMovingForward = false;
@@ -1005,6 +1022,7 @@ var WebSlides = function () {
           this.transitionToSlide_(isMovingForward, nextSlide, this.onSlideChange_);
         }
       }
+      //document.getElementById("spCurrentslide").textContent = "Hi";
     }
 
     /**

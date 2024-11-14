@@ -1,579 +1,956 @@
 <!doctype html>
 <html lang="en" prefix="og: http://ogp.me/ns#">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- SEO -->
-    <title>WebSlides: Making HTML presentations easy</title>
-    <meta name="description" content="WebSlides is the easiest way to make HTML presentations, portfolios, and landings. Just essential features.">
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,700,700i%7CMaitree:200,300,400,600,700&amp;subset=latin-ext" rel="stylesheet">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- SEO -->
+  <title>WebSlides: Making HTML presentations easy</title>
+  <meta name="description"
+    content="WebSlides is the easiest way to make HTML presentations, portfolios, and landings. Just essential features.">
 
-    <!-- CSS WebSlides -->
-    <link rel="stylesheet" type='text/css' media='all' href="static/css/webslides.css">
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,700,700i%7CMaitree:200,300,400,600,700&amp;subset=latin-ext"
+    rel="stylesheet">
 
-    <!-- Optional - CSS SVG Icons (Font Awesome) -->
-    <link rel="stylesheet" type='text/css' media='all' href="static/css/svg-icons.css">
+  <!-- CSS WebSlides -->
+  <link rel="stylesheet" type='text/css' media='all' href="static/css/webslides.css">
 
-    <!-- SOCIAL CARDS (ADD YOUR INFO) -->
+  <!-- Optional - CSS SVG Icons (Font Awesome) -->
+  <link rel="stylesheet" type='text/css' media='all' href="static/css/svg-icons.css">
 
-    <!-- FACEBOOK -->
-    <meta property="og:url" content="http://your-url.com/"> <!-- YOUR URL -->
-    <meta property="og:type" content="article">
-    <meta property="og:title" content="WebSlides — Making HTML Presentations Easy"> <!-- EDIT -->
-    <meta property="og:description" content="WebSlides is about telling stories beautifully. Just the essential features. Good karma."> <!-- EDIT -->
-    <meta property="og:updated_time" content="2017-01-04T17:20:50"> <!-- EDIT -->
-    <meta property="og:image" content="static/images/share-webslides.jpg"> <!-- EDIT -->
+  <!-- SOCIAL CARDS (ADD YOUR INFO) -->
 
-    <!-- TWITTER -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@webslides"> <!-- EDIT -->
-    <meta name="twitter:creator" content="@jlantunez"> <!-- EDIT -->
-    <meta name="twitter:title" content="WebSlides — Making HTML Presentations Easy"> <!-- EDIT -->
-    <meta name="twitter:description" content="WebSlides is about good karma. Just essential features. 120+ free slides ready to use."> <!-- EDIT -->
-    <meta name="twitter:image" content="static/images/share-webslides.jpg"> <!-- EDIT -->
+  <!-- FACEBOOK -->
+  <meta property="og:url" content="http://your-url.com/"> <!-- YOUR URL -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="WebSlides — Making HTML Presentations Easy"> <!-- EDIT -->
+  <meta property="og:description"
+    content="WebSlides is about telling stories beautifully. Just the essential features. Good karma."> <!-- EDIT -->
+  <meta property="og:updated_time" content="2017-01-04T17:20:50"> <!-- EDIT -->
+  <meta property="og:image" content="static/images/share-webslides.jpg"> <!-- EDIT -->
 
-    <!-- FAVICONS -->
-    <link rel="shortcut icon" sizes="16x16" href="static/images/favicons/favicon.png">
-    <link rel="shortcut icon" sizes="32x32" href="static/images/favicons/favicon-32.png">
-    <link rel="apple-touch-icon icon" sizes="76x76" href="static/images/favicons/favicon-76.png">
-    <link rel="apple-touch-icon icon" sizes="120x120" href="static/images/favicons/favicon-120.png">
-    <link rel="apple-touch-icon icon" sizes="152x152" href="static/images/favicons/favicon-152.png">
-    <link rel="apple-touch-icon icon" sizes="180x180" href="static/images/favicons/favicon-180.png">
-    <link rel="apple-touch-icon icon" sizes="192x192" href="static/images/favicons/favicon-192.png">
+  <!-- TWITTER -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@webslides"> <!-- EDIT -->
+  <meta name="twitter:creator" content="@jlantunez"> <!-- EDIT -->
+  <meta name="twitter:title" content="WebSlides — Making HTML Presentations Easy"> <!-- EDIT -->
+  <meta name="twitter:description"
+    content="WebSlides is about good karma. Just essential features. 120+ free slides ready to use."> <!-- EDIT -->
+  <meta name="twitter:image" content="static/images/share-webslides.jpg"> <!-- EDIT -->
 
-    <!-- Android -->
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="theme-color" content="#333333">
+  <!-- FAVICONS -->
+  <link rel="shortcut icon" sizes="16x16" href="static/images/favicons/favicon.png">
+  <link rel="shortcut icon" sizes="32x32" href="static/images/favicons/favicon-32.png">
+  <link rel="apple-touch-icon icon" sizes="76x76" href="static/images/favicons/favicon-76.png">
+  <link rel="apple-touch-icon icon" sizes="120x120" href="static/images/favicons/favicon-120.png">
+  <link rel="apple-touch-icon icon" sizes="152x152" href="static/images/favicons/favicon-152.png">
+  <link rel="apple-touch-icon icon" sizes="180x180" href="static/images/favicons/favicon-180.png">
+  <link rel="apple-touch-icon icon" sizes="192x192" href="static/images/favicons/favicon-192.png">
 
-  </head>
-  <body>
-    <header role="banner">
-      <nav role="navigation">
-        <p class="logo"><img src="logo/logo.png"> </p>
-        <!-- <ul>
-          <li class="github">
-            <a rel="external" href="https://github.com/webslides/webslides" title="Github">
-              <svg class="fa-github">
-                <use xlink:href="#fa-github"></use>
-              </svg>
-              <em>WebSlides</em>
-            </a>
-          </li>
-          <li class="twitter">
-            <a rel="external" href="https://twitter.com/webslides" title="Twitter">
-              <svg class="fa-twitter">
-                <use xlink:href="#fa-twitter"></use>
-              </svg>
-              <em>@WebSlides</em>
-            </a>
-          </li>
-          
-        </ul> -->
-      </nav>
-    </header>
+  <!-- Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#333333">
+  <style>
+    header[role='banner'] {
+      opacity: 1 !important;
+    }
 
-    <main role="main">
-      <article id="webslides" class="vertical">      
-        <section>
-         <!-- <span class="background" style="background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlpzrCj0260gL0baI-meSLiu3p8FjOZyxe1g&s')"></span> -->
-          <!--.wrap = container (width: 90%) -->
-          <div class="wrap aligncenter">
-            <img src="logo/logo.png">
-            <p style="margin-top: 50pt;">
-            <h1><strong>Data Analysis and Predictive Modeling using Python</strong></h1>
-            <h4 class="mute">Heart Disease Prediction
-            </h4>
+    .clstech {
+      font-size: 16pt;
+      font-style: italic;
+      margin-bottom: 5pt;
+    }
+
+    .spDataType {
+      font-size: 14pt !important;
+      float: right !important;
+      font-style: italic;
+    }
+
+    .secDatasetOverview .flexblock.features>li {
+      border-radius: .8rem !important;
+      margin-bottom: 0.5rem !important;
+      border: 1px solid #2758b8;
+    }
+
+    .titleheading {
+      font-style: italic;
+      font-family: serif;
+    }
+  </style>
+</head>
+
+<body>
+  <header role="banner">
+    <nav role="navigation">
+      <p class="logo">
+        <img src="logo/logo.png">
+        <span id="spCurrentslide" style="float: right; font-weight: 600;"></span>
+      </p>
+    </nav>
+  </header>
+
+  <main role="main">
+    <article id="webslides" class="vertical">
+      <section>
+        <!-- <span class="background" style="background-image:url('https://www.karingalvet.com.au/wp-content/uploads/2015/08/ECG-300x194@2x.jpg')"></span> -->
+        <div class="wrap aligncenter">
+          <p style="margin-top: 50pt;">
+          <h1><strong>Data Analysis and Predictive Modeling using Python</strong></h1>
+          <h4 class="mute">Heart Disease Prediction
+          </h4>
           </p>
-            <!-- <p class="text-intro">Heart Disease Prediction</p> -->            
+        </div>
+      </section>
+      <section>
+        <div class="grid vertical-align">
+          <div class="column" style="width: 50%;">
+            <h2><strong>Forhad Hossain</strong></h2>
+            <h4 class="mute">Software Engineer</h4>
+            <hr>
+            <h5 class="mute">Data Science & AI, Institute of Data</h5>
+            <hr>
+            <span class="clstech">Python, C#, Java, Node.js, Javascript, Typescript</span>
+            <span class="clstech">SQL, MySQL, Mongodb</span>
+            <span class="clstech">Azure, AWS</span>
+            <span class="clstech">Git</span>
+            <hr>
+            <h5 class="mute">Mini Project One</h5>
           </div>
-          <!-- .end .wrap -->
-        </section>
-        <section>
-          <!--.wrap = container (width: 90%) -->
-          <div class="wrap size-50 aligncenter">
-            <h2><strong>Introduction</strong></h2>
-            <!-- <p class="text-intro"><a href="demos/why-webslides.html" title="Why WebSlides?">Presentations</a>, <a href="demos/landings.html" title="Landings">landings</a>, <a href="demos/portfolios.html" title="Portfolios">portfolios</a>, and <a href="demos/longforms.html" title="Longforms">longforms</a>.</p> -->
-            <div class="bg-white shadow">
-              <ul class="flexblock reasons">
-                <li>
-                  <h2>Objective</h2>
-                  <p>To analyze key features and build a predictive model for heart disease using Python.</p>
-                </li>
-                <li>
-                  <h2>Target:</h2>
-                  <p>Predict the presence of heart disease </p>
-                </li>
-              </ul>
-            </div>
-            <!-- .end .bg-white shadow -->
-          </div>
-          <!-- .end .wrap -->
-        </section>
-        <section>
-          <div class="wrap">
-            <h2>Dataset Overview</h2>
-            <ul class="flexblock features">
+        </div>
+        </div>
+      </section>
+      <section>
+        <div class="grid vertical-align">
+          <img src="EDA/Agenda.png" alt="Agenda">
+        </div>
+        </div>
+      </section>
+      <section>
+        <div class="grid aligncenter titleheading">
+          <h2><strong>Introduction</strong></h2>
+        </div>
+        <hr>
+        <div class="wrap size-50 aligncenter">
+          <p class="text-intro">Heart disease remains the world’s top cause of death, claiming nearly 18 million lives
+            each year.
+            This group of conditions, including heart attacks and strokes, is often driven by risk factors like high
+            blood pressure,
+            high cholesterol, smoking, and diabetes.</p>
+          <div class="bg-white shadow">
+            <ul class="flexblock reasons">
               <li>
-                <div>
-                  <h2>
-                    <span>&rarr;</span>
-                    Total records
-                  </h2>
-                  303
-                </div>
+                <h2>Objective</h2>
+                <p>To analyze key features and build a predictive model for heart disease using Python.</p>
               </li>
               <li>
-                <div>
-                  <h2>
-                    <svg class="fa-link">
-                      <use xlink:href="#fa-link"></use>
-                    </svg>
-                    Features
-                  </h2>
-                  14, including both categorical and continuous variables
-                </div>
-              </li>
-              <li>
-                <div>
-                  <h2>
-                    <svg class="fa-clock-o">
-                      <use xlink:href="#fa-clock-o"></use>
-                    </svg>
-                    Target Variable
-                  </h2>
-                  output (binary variable indicating heart disease presence)
-                </div>
-              </li>              
-            </ul>
-          </div>
-        </section>
-        <section>
-          <div class="wrap">
-            <h2>Dataset Overview</h2>
-            <ul class="flexblock features">
-              <li>
-                
-                <div>
-                  <h2>
-                    <span>&rarr;</span>
-                    age 
-                  </h2>
-                  Patient age
-                  <p style="margin-top: 10px;">
-                  <strong>Data Type:</strong> integer</p>
-                </div>
-              </li>
-              <li>
-                <div>
-                  <h2>
-                    <span>&rarr;</span>
-                    sex
-                  </h2>
-                  Gender (1 = male, 0 = female)
-                  <p style="margin-top: 10px;">
-                    <strong>Data Type:</strong> integer</p>
-                </div>
-              </li>
-              <li>
-                <div>
-                  <h2>
-                    <span>&rarr;</span>
-                    cp
-                  </h2>
-                  Chest pain type (categorical: values 0–3)
-                  <p style="margin-top: 10px;">
-                    <strong>Data Type:</strong> integer</p>
-                </div>
-              </li>
-              <li>
-                <div>
-                  <h2>
-                    <span>&rarr;</span>
-                    rtbpst
-                  </h2>
-                  Resting blood pressure (mm Hg)
-                  <p style="margin-top: 10px;">
-                    <strong>Data Type:</strong> integer</p>
-                </div>
-              </li>
-              <li>
-                <div>
-                  <h2>
-                    <span>&rarr;</span>                 
-                    chol
-                  </h2>
-                  Cholesterol level (mg/dl)
-                  <p style="margin-top: 10px;">
-                    <strong>Data Type:</strong> integer</p>
-                </div>
-              </li>
-              <li>
-                <div>
-                  <h2>
-                    <span>&rarr;</span>
-                    fbs
-                  </h2>
-                  Fasting blood sugar (>120 mg/dl) (1 = true; 0 = false)
-                  <p style="margin-top: 10px;">
-                    <strong>Data Type:</strong> integer</p>
-                </div>
-              </li>
-              <li>
-                <div>
-                  <h2>
-                    <span>&rarr;</span>
-                    restecg
-                  </h2>
-                   Resting electrocardiographic results (categorical: values 0–2)
-                   <p style="margin-top: 10px;">
-                    <strong>Data Type:</strong> integer</p>
-                </div>
-              </li>
-              <li>
-                <div>
-                  <h2>
-                    <span>&rarr;</span>
-                    thalachh
-                  </h2>
-                   Maximum heart rate achieved
-                   <p style="margin-top: 10px;">
-                    <strong>Data Type:</strong> integer</p>
-                </div>
-              </li>
-              <li>
-                <div>
-                  <h2>
-                    <span>&rarr;</span>
-                  exng
-                  </h2>
-                  Exercise-induced angina (1 = yes; 0 = no)
-                  <p style="margin-top: 10px;">
-                    <strong>Data Type:</strong> integer</p>
-                </div>
-              </li>
-              <li>
-                <div>
-                  <h2>
-                    <span>&rarr;</span>
-                    oldpeak
-                  </h2>
-                  Depression induced by exercise relative to rest
-                  <p style="margin-top: 10px;">
-                    <strong>Data Type:</strong> float</p>
-                </div>
-              </li>
-              <li>
-                <div>
-                  <h2>
-                    <span>&rarr;</span>
-                    slp
-                  </h2>
-                  Slope of the peak exercise ST segment
-                  <p style="margin-top: 10px;">
-                    <strong>Data Type:</strong> integer</p>
-                </div>
-              </li>
-              <li>
-                <div>
-                  <h2>
-                    <span>&rarr;</span>
-                    caa
-                  </h2>
-                  Number of major vessels (0-4) colored by fluoroscopy
-                  <p style="margin-top: 10px;">
-                    <strong>Data Type:</strong> integer</p>
-                </div>
-              </li>
-              <li>
-                <div>
-                  <h2>
-                    <span>&rarr;</span>
-                  thall
-                  </h2>
-                  Thalassemia (categorical: values 0–3)
-                  <p style="margin-top: 10px;">
-                    <strong>Data Type:</strong> integer</p>
-                </div>
-              </li>
-              <li>
-                <div>
-                  <h2>
-                    <span>&rarr;</span>
-                  output
-                  </h2>
-                  Target variable (1 = presence of heart disease, 0 = absence)
-                  <p style="margin-top: 10px;">
-                    <strong>Data Type:</strong> integer</p>
-                </div>
+                <h2>Target:</h2>
+                <p>Predict the presence of heart disease </p>
               </li>
             </ul>
           </div>
-        </section>
-        <section>
+        </div>
+      </section>
+      <section>
+        <div class="grid aligncenter titleheading">
+          <h2><strong>Stakeholders</strong></h2>
+        </div>
+        <hr>
+        <div class="grid aligncenter">
+          <center><img src="EDA/StackHolder.png" alt="Agenda" style="width: 70%;"></center>
+        </div>
+        </div>
+      </section>
+      <section>
+        <div class="grid aligncenter titleheading">
+          <h2><strong>Dataset Overview</strong></h2>
+        </div>
+        <hr>
+        <div class="wrap">
           <div class="wrap">
-            <h2><strong>Data Preprocessing</strong></h2>
-            <a href="demos/why-webslides.html" title="Why WebSlides?">
-              <figure>
-                <figcaption>
-                  <h2>Data Tables</h2>
-                </figcaption>
-                <img alt="Thumbnail Why WebSlides?" src="data_tables/head.JPG" style="width: 100%;">
-                
-              </figure>
-            </a>            
-          </div>
-          <!-- .end .wrap -->
-        </section>
-        <section>
-          <div class="wrap">
-            <h2><strong>Data Preprocessing</strong></h2>           
-            <a href="demos/why-webslides.html" title="Why WebSlides?">
-              <figure>
-                <figcaption>
-                  <h2>Data Describe</h2>
-                </figcaption>
-                <img alt="Thumbnail Why WebSlides?" src="data_tables/describe.JPG">                
-              </figure>
-            </a>            
-          </div>
-          <!-- .end .wrap -->
-        </section>
-        <section>
-          <div class="wrap">
-            <h2><strong>Data Preprocessing</strong></h2>      
-            
-            <ul class="flexblock gallery">              
-              <li>
-                <a href="demos/landings.html" title="Landings">
-                  <figure>
-                    <figcaption>
-                      <h2>Check Data Information</h2>
-                    </figcaption>
-                    <img alt="Thumbnail Landings" src="data_tables/info.JPG">
-                    
-                  </figure>
-                </a>
-              </li>
-              <li>
-                <a href="demos/portfolios.html" title="Portfolios">
-                  <figure>
-                    <figcaption>
-                      <h2>Check Null Values</h2>
-                    </figcaption>
-                    <img alt="Thumbnail Portfolios" src="data_tables/Null_Value.JPG">                   
-                  </figure>
-                </a>
-              </li>              
-            </ul>
-          </div>
-          <!-- .end .wrap -->
-        </section>
-        <section>
-          <div class="wrap">
-            <h2><strong>EDA</strong></h2>
-            <a href="#" title="Gender Distribution">
-              <figure>
-                <figcaption>
-                  <h2>Gender Distribution</h2>
-                </figcaption>
-                <img alt="Thumbnail Why WebSlides?" src="EDA/gender_distribution.png">
-                
-              </figure>
-            </a>            
-          </div>
-        </section>
-          <section>
-            <div class="wrap">
-              <div class="grid vertical-align">
-                <div class="column">
-                  <h3><strong>Data Training for Predication</strong></h3>
-                  <img alt="Thumbnail Why WebSlides?" src="EDA/Age_Distribution.png">
-                </div>
-                <!-- .end .column -->
-                <div class="column">
-                  <h3><strong>Data Training for Predication</strong></h3>
-                  <img alt="Thumbnail Why WebSlides?" src="EDA/Output_and_Sex.png">
-                </div>
- 
-                </div>
-                <!-- .end .column -->
+            <div class="grid vertical-align">
+              <div class="column">
+                <ul class="flexblock features">
+                  <li>
+                    <div>
+                      <h2>
+                        <span>&rarr;</span>
+                        <a target="_blank"
+                          href="https://www.kaggle.com/code/mdtamzidulislam/heart-disease-prediction/input">Data Source
+                          -
+                          <strong>Kaggle</strong></a>
+                      </h2>
+                      <a target="_blank"
+                        href="https://www.kaggle.com/code/mdtamzidulislam/heart-disease-prediction/input">Heart Disease
+                        Prediction</a>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <h2>
+                        <span>&rarr;</span>
+                        Total records
+                      </h2>
+                      303
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <h2>
+                        <span>&rarr;</span>
+                        Features
+                      </h2>
+                      14, including both categorical and continuous variables
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <h2>
+                        <span>&rarr;</span>
+                        Target Variable
+                      </h2>
+                      output (binary variable indicating heart disease presence)
+                    </div>
+                  </li>
+                </ul>
               </div>
-              <!-- .end .grid -->            
-            <!-- .end .wrap -->
-          </section>
-            <div class="wrap">
-              <h2><strong>EDA</strong></h2>
-              <a href="#" title="Age Distribution">
-                <figure>
-                  <figcaption>
-                    <h2>Age Distribution</h2>
-                  </figcaption>
-                  <img alt="Thumbnail Why WebSlides?" src="EDA/Age_Distribution.png">
-                  
-                </figure>
-              </a>            
+              <div class="column">
+                <ul class="flexblock features">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Feature</th>
+                        <th>Description</th>
+                        <th>Data Type</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>age</td>
+                        <td>Patient age</td>
+                        <td>integer</td>
+                      </tr>
+                      <tr>
+                        <td>sex</td>
+                        <td>Gender (1 = male, 0 = female)</td>
+                        <td>integer</td>
+                      </tr>
+                      <tr>
+                        <td>cp</td>
+                        <td>Chest pain type (categorical: values 0–3)</td>
+                        <td>integer</td>
+                      </tr>
+                      <tr>
+                        <td>rtbpst</td>
+                        <td>Resting blood pressure (mm Hg)</td>
+                        <td>integer</td>
+                      </tr>
+                      <tr>
+                        <td>chol</td>
+                        <td>Cholesterol level (mg/dl)</td>
+                        <td>integer</td>
+                      </tr>
+                      <tr>
+                        <td>fbs</td>
+                        <td>Fasting blood sugar (>120 mg/dl) (1 = true; 0 = false)</td>
+                        <td>integer</td>
+                      </tr>
+                      <tr>
+                        <td>restecg</td>
+                        <td>Resting electrocardiographic results (categorical: values 0–2)</td>
+                        <td>integer</td>
+                      </tr>
+                      <tr>
+                        <td>thalachh</td>
+                        <td>Maximum heart rate achieved</td>
+                        <td>integer</td>
+                      </tr>
+                      <tr>
+                        <td>exng</td>
+                        <td>Exercise-induced angina (1 = yes; 0 = no)</td>
+                        <td>integer</td>
+                      </tr>
+                      <tr>
+                        <td>oldpeak</td>
+                        <td>Depression induced by exercise relative to rest</td>
+                        <td>float</td>
+                      </tr>
+                      <tr>
+                        <td>slp</td>
+                        <td>Slope of the peak exercise ST segment</td>
+                        <td>integer</td>
+                      </tr>
+                      <tr>
+                        <td>caa</td>
+                        <td>Number of major vessels (0-4) colored by fluoroscopy</td>
+                        <td>integer</td>
+                      </tr>
+                      <tr>
+                        <td>thall</td>
+                        <td>Thalassemia (categorical: values 0–3)</td>
+                        <td>integer</td>
+                      </tr>
+                      <tr>
+                        <td>output</td>
+                        <td>Target variable (1 = presence of heart disease, 0 = absence)</td>
+                        <td>integer</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </ul>
+              </div>
             </div>
-          <!-- .end .wrap -->
-        </section>
-        <section>
-          <div class="wrap">
-            <h2><strong>EDA</strong></h2>
-            <a href="#" title="Age Distribution">
-              <figure>
-                <figcaption>
-                  <h2>Age Distribution</h2>
-                </figcaption>
-                <img alt="Thumbnail Why WebSlides?" src="EDA/Age_Frequency.png">
-                
-              </figure>
-            </a>            
           </div>
+        </div>
+      </section>
+      <!-- <section class="secDatasetOverview">
+        <div class="wrap">
+          <h2>Dataset Overview</h2>
+          <ul class="flexblock features">
+            <li>
+              <div>
+                <h2>
+                  <span>&rarr;</span>
+                  age
+                </h2>
+                Patient age <span class="spDataType"><strong>Data Type:</strong> integer</span>
+              </div>
+            </li>
+            <li>
+              <div>
+                <h2>
+                  <span>&rarr;</span>
+                  sex
+                </h2>
+                Gender (1 = male, 0 = female) <span class="spDataType"><strong>Data Type:</strong> integer</span>
+              </div>
+            </li>
+            <li>
+              <div>
+                <h2>
+                  <span>&rarr;</span>
+                  cp
+                </h2>
+                Chest pain type (categorical: values 0–3) <span class="spDataType"><strong>Data Type:</strong>
+                  integer</span>
+              </div>
+            </li>
+            <li>
+              <div>
+                <h2>
+                  <span>&rarr;</span>
+                  rtbpst
+                </h2>
+                Resting blood pressure (mm Hg) <span class="spDataType"><strong>Data Type:</strong> integer</span>
+              </div>
+            </li>
+            <li>
+              <div>
+                <h2>
+                  <span>&rarr;</span>
+                  chol
+                </h2>
+                Cholesterol level (mg/dl) <span class="spDataType"><strong>Data Type:</strong> integer</span>
+              </div>
+            </li>
+            <li>
+              <div>
+                <h2>
+                  <span>&rarr;</span>
+                  fbs
+                </h2>
+                Fasting blood sugar (>120 mg/dl) (1 = true; 0 = false) <span class="spDataType"><strong>Data
+                    Type:</strong> integer</span>
+              </div>
+            </li>
+            <li>
+              <div>
+                <h2>
+                  <span>&rarr;</span>
+                  restecg
+                </h2>
+                Resting electrocardiographic results (categorical: values 0–2) <span class="spDataType"><strong>Data
+                    Type:</strong> integer</span>
+              </div>
+            </li>
+            <li>
+              <div>
+                <h2>
+                  <span>&rarr;</span>
+                  thalachh
+                </h2>
+                Maximum heart rate achieved <span class="spDataType"><strong>Data Type:</strong> integer</span>
+              </div>
+            </li>
+            <li>
+              <div>
+                <h2>
+                  <span>&rarr;</span>
+                  exng
+                </h2>
+                Exercise-induced angina (1 = yes; 0 = no) <span class="spDataType"><strong>Data Type:</strong>
+                  integer</span>
+              </div>
+            </li>
+            <li>
+              <div>
+                <h2>
+                  <span>&rarr;</span>
+                  oldpeak
+                </h2>
+                Depression induced by exercise relative to rest <span class="spDataType"><strong>Data Type:</strong>
+                  float</span>
+              </div>
+            </li>
+            <li>
+              <div>
+                <h2>
+                  <span>&rarr;</span>
+                  slp
+                </h2>
+                Slope of the peak exercise ST segment <span class="spDataType"><strong>Data Type:</strong>
+                  integer</span>
+              </div>
+            </li>
+            <li>
+              <div>
+                <h2>
+                  <span>&rarr;</span>
+                  caa
+                </h2>
+                Number of major vessels (0-4) colored by fluoroscopy <span class="spDataType"><strong>Data
+                    Type:</strong> integer</span>
+              </div>
+            </li>
+            <li>
+              <div>
+                <h2>
+                  <span>&rarr;</span>
+                  thall
+                </h2>
+                Thalassemia (categorical: values 0–3) <span class="spDataType"><strong>Data Type:</strong>
+                  integer</span>
+              </div>
+            </li>
+            <li>
+              <div>
+                <h2>
+                  <span>&rarr;</span>
+                  output
+                </h2>
+                Target variable (1 = presence of heart disease, 0 = absence) <span class="spDataType"><strong>Data
+                    Type:</strong> integer</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section> -->
+      <section>
+        <div class="wrap aligncenter titleheading">
+          <h2><strong>Sample Data</strong></h2>
+        </div>        
+        <hr>
+        <div class="wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>rowID</th>
+                <th>age</th>
+                <th>sex</th>
+                <th>cp</th>
+                <th>trtbps</th>
+                <th>chol</th>
+                <th>fbs</th>
+                <th>restecg</th>
+                <th>thalachh</th>
+                <th>exng</th>
+                <th>oldpeak</th>
+                <th>slp</th>
+                <th>caa</th>
+                <th>thall</th>
+                <th>output</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>0</td>
+                <td>63</td>
+                <td>1</td>
+                <td>3</td>
+                <td>145</td>
+                <td>233</td>
+                <td>1</td>
+                <td>0</td>
+                <td>150</td>
+                <td>0</td>
+                <td>2.3</td>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>37</td>
+                <td>1</td>
+                <td>2</td>
+                <td>130</td>
+                <td>250</td>
+                <td>0</td>
+                <td>1</td>
+                <td>187</td>
+                <td>0</td>
+                <td>3.5</td>
+                <td>0</td>
+                <td>0</td>
+                <td>2</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>41</td>
+                <td>0</td>
+                <td>1</td>
+                <td>130</td>
+                <td>204</td>
+                <td>0</td>
+                <td>0</td>
+                <td>172</td>
+                <td>0</td>
+                <td>1.4</td>
+                <td>2</td>
+                <td>0</td>
+                <td>2</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>56</td>
+                <td>1</td>
+                <td>1</td>
+                <td>120</td>
+                <td>236</td>
+                <td>0</td>
+                <td>1</td>
+                <td>178</td>
+                <td>0</td>
+                <td>0.8</td>
+                <td>2</td>
+                <td>0</td>
+                <td>2</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>57</td>
+                <td>0</td>
+                <td>0</td>
+                <td>120</td>
+                <td>354</td>
+                <td>0</td>
+                <td>1</td>
+                <td>163</td>
+                <td>1</td>
+                <td>0.6</td>
+                <td>2</td>
+                <td>0</td>
+                <td>2</td>
+                <td>1</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
         <!-- .end .wrap -->
       </section>
       <section>
+        <div class="wrap aligncenter titleheading">
+          <h2><strong>Data Describe</strong></h2>
+        </div>        
+        <hr>
         <div class="wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>info</th>
+                <th>age</th>
+                <th>sex</th>
+                <th>cp</th>
+                <th>trtbps</th>
+                <th>chol</th>
+                <th>fbs</th>
+                <th>restecg</th>
+                <th>thalachh</th>
+                <th>exng</th>
+                <th>oldpeak</th>
+                <th>slp</th>
+                <th>caa</th>
+                <th>thall</th>
+                <th>output</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>count</td>
+                <td>303</td>
+                <td>303</td>
+                <td>303</td>
+                <td>303</td>
+                <td>303</td>
+                <td>303</td>
+                <td>303</td>
+                <td>303</td>
+                <td>303</td>
+                <td>303</td>
+                <td>303</td>
+                <td>303</td>
+                <td>303</td>
+                <td>303</td>
+              </tr>
+              <tr>
+                <td>mean</td>
+                <td>54.37</td>
+                <td>0.68</td>
+                <td>0.97</td>
+                <td>131.62</td>
+                <td>246.26</td>
+                <td>0.15</td>
+                <td>0.53</td>
+                <td>149.65</td>
+                <td>0.33</td>
+                <td>1.04</td>
+                <td>1.40</td>
+                <td>0.73</td>
+                <td>2.31</td>
+                <td>0.54</td>
+              </tr>
+              <tr>
+                <td>std</td>
+                <td>9.08</td>
+                <td>0.47</td>
+                <td>1.03</td>
+                <td>17.54</td>
+                <td>51.83</td>
+                <td>0.36</td>
+                <td>0.53</td>
+                <td>22.91</td>
+                <td>0.47</td>
+                <td>1.16</td>
+                <td>0.62</td>
+                <td>1.02</td>
+                <td>0.61</td>
+                <td>0.50</td>
+              </tr>
+              <tr>
+                <td>min</td>
+                <td>29</td>
+                <td>0</td>
+                <td>0</td>
+                <td>94</td>
+                <td>126</td>
+                <td>0</td>
+                <td>0</td>
+                <td>71</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>25%</td>
+                <td>47.50</td>
+                <td>0</td>
+                <td>0</td>
+                <td>120</td>
+                <td>211</td>
+                <td>0</td>
+                <td>0</td>
+                <td>133.50</td>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+                <td>2</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>50%</td>
+                <td>55</td>
+                <td>1</td>
+                <td>1</td>
+                <td>130</td>
+                <td>240</td>
+                <td>0</td>
+                <td>1</td>
+                <td>153</td>
+                <td>0</td>
+                <td>0.80</td>
+                <td>1</td>
+                <td>0</td>
+                <td>2</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>75%</td>
+                <td>61</td>
+                <td>1</td>
+                <td>2</td>
+                <td>140</td>
+                <td>274.5</td>
+                <td>0</td>
+                <td>1</td>
+                <td>166</td>
+                <td>1</td>
+                <td>1.60</td>
+                <td>2</td>
+                <td>1</td>
+                <td>3</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>max</td>
+                <td>77</td>
+                <td>1</td>
+                <td>3</td>
+                <td>200</td>
+                <td>564</td>
+                <td>1</td>
+                <td>2</td>
+                <td>202</td>
+                <td>1</td>
+                <td>6.20</td>
+                <td>2</td>
+                <td>4</td>
+                <td>3</td>
+                <td>1</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- .end .wrap -->
+      </section>
+      <section>
+        <div class="wrap aligncenter titleheading">
+          <h2><strong>Data Processing</strong></h2>
+        </div>        
+        <hr>
+        <div class="wrap">
+          <ul class="flexblock gallery">
+            <li>
+              <a href="demos/landings.html" title="Landings">
+                <figure>
+                  <figcaption>
+                    <h2>Check Data Information</h2>
+                  </figcaption>
+                  <img alt="Thumbnail Landings" src="data_tables/info.JPG">
+
+                </figure>
+              </a>
+            </li>
+            <li>
+              <a href="demos/portfolios.html" title="Portfolios">
+                <figure>
+                  <figcaption>
+                    <h2>Check Null Values</h2>
+                  </figcaption>
+                  <img alt="Thumbnail Portfolios" src="data_tables/Null_Value.JPG">
+                </figure>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section>
+        <div class="wrap aligncenter titleheading">
+          <h2><strong>Gender information</strong></h2>
+        </div>        
+        <hr>
+        <div class="wrap aligncenter">          
+          <a href="#" title="Gender Distribution">
+            <figure>
+              <img alt="Thumbnail Why WebSlides?" src="EDA/gender_distribution.png" style="width: 65%;">
+            </figure>
+          </a>
+        </div>
+      </section>
+      <section>
+        <div class="wrap aligncenter">
+          <div class="grid aligncenter">
+            <div class="column">
+              <center> <img alt="Thumbnail Why WebSlides?" src="EDA/Age_Distribution.png" style="width: 65%;"></center>
+            </div>
+            <div class="column">
+              <center><img alt="Thumbnail Why WebSlides?" src="EDA/Output_and_Sex.png" style="width: 65%;"></center>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="wrap aligncenter">
+         <div class="wrap aligncenter titleheading">
+          <h2><strong>Gender information</strong></h2>
+        </div>        
+        <hr>
+        <a href="#" title="Age Distribution">
+          <figure>
+            <figcaption>
+              <h2>Age Distribution</h2>
+            </figcaption>
+            <img alt="Thumbnail Why WebSlides?" src="EDA/Age_Distribution.png">
+          </figure>
+        </a>
+      </div>
+      </section>
+      <section>
+        <div class="wrap aligncenter titleheading">
+          <h2><strong>Age Distribution</strong></h2>
+        </div>        
+        <hr>
+        <div class="wrap aligncenter">         
+          <div>
+            <center>
+              <img alt="Thumbnail Why WebSlides?" src="EDA/Age_Frequency.png" style="width: 70%;">
+            </center>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="wrap">
+          <div class="grid aligncenter">            
+            <div class="column">
+              <div class="wrap aligncenter titleheading">
+                <h2><strong>Correlation Matrix</strong></h2>
+              </div>        
+              <hr>
+              <center><img alt="Thumbnail Why WebSlides?" src="EDA/Correlation_Matrix.png" style="width: 65%;"></center>
+            </div>
+            <!-- .end .column -->
+            <div class="column">              
+              <div class="wrap aligncenter titleheading">
+                <h2><strong>Box Plot</strong></h2>
+              </div>        
+              <hr>
+              <center><img alt="Thumbnail Why WebSlides?" src="EDA/Distribution_BoxPlot.png" style="width: 65%;">
+              </center>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="wrap aligncenter">
+          <div class="wrap aligncenter titleheading">
+            <h2><strong>Distribution</strong></h2>
+          </div>        
+          <hr>
+          <center><img alt="Thumbnail Why WebSlides?" src="EDA/Distribution_Features.png" style="width: 45%;">
+          </center>
+        </div>
+        <!-- .end .wrap -->
+      </section>
+      <section>
+        <!--.wrap = container (width: 90%) -->
+        <div class="wrap">
+          <div class="wrap aligncenter titleheading">
+            <h2><strong>Data Training for Predication</strong></h2>
+          </div>        
+          <hr>
+          <div class="grid vertical-align">
+            <div class="column">            
+              <img alt="Thumbnail Why WebSlides?" src="EDA/Matrix_ML.JPG" style="width: 67%;">
+            </div>
+            <div class="column">
+              <img alt="Thumbnail Why WebSlides?" src="EDA/CF_Matrix.JPG" style="width: 67%;">
+            </div>
+            <div class="column">
+              <img alt="Thumbnail Why WebSlides?" src="EDA/Training_Accuracy.JPG" style="width: 67%;">
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="wrap">
+          <div class="wrap aligncenter titleheading">
+            <h2><strong>Predication UI</strong></h2>
+          </div>        
+          <hr>         
           <div class="grid vertical-align">
             <div class="column">
-              <h3><strong>Data Training for Predication</strong></h3>
-              <img alt="Thumbnail Why WebSlides?" src="EDA/Correlation_Matrix.png">
+              <center> <img alt="Thumbnail Why WebSlides?" src="UI/Model_Test_No.JPG" style="width: 60%;"></center>
             </div>
-            <!-- .end .column -->
             <div class="column">
-              <h3><strong>Data Training for Predication</strong></h3>
-              <img alt="Thumbnail Why WebSlides?" src="EDA/Distribution_BoxPlot.png" style="width: 80%;">
-            </div>
-
-            </div>
-            <!-- .end .column -->
-          </div>
-        
-      <!-- .end .wrap -->
-    </section>    
-  <section>
-    <div class="wrap">
-      <h2><strong>EDA</strong></h2>
-      <a href="#" title="Age Distribution">
-        <figure>
-          <figcaption>
-            <h2>Age Distribution</h2>
-          </figcaption>
-          <img alt="Thumbnail Why WebSlides?" src="EDA/Distribution_Features.png">
-          
-        </figure>
-      </a>            
-    </div>
-  <!-- .end .wrap -->
-</section>
-        <section>
-          <!--.wrap = container (width: 90%) -->
-          <div class="wrap">
-            <div class="grid vertical-align">
-              <div class="column">
-                <h3><strong>Data Training for Predication</strong></h3>
-                <p class="text-intro">The model train with tensor flow. </p>
-                <img alt="Thumbnail Why WebSlides?" src="logo/tensorflow_logo.png" style="width: 25%;">
-              </div>
-              <!-- .end .column -->
-              <div class="column">
-                <img alt="Thumbnail Why WebSlides?" src="Code/DataTrainProcess.JPG" style="width: 50%;">
-              </div>
-              <!-- .end .column -->
-            </div>
-            <!-- .end .grid -->
-          </div>
-          <!-- .end .wrap -->
-        </section>
-        
-        
-        <section>
-          <div class="wrap">
-            <div class="grid vertical-align">
-              <div class="column">
-                <h4>
-                  <svg class="fa-life-ring">
-                    <use xlink:href="#fa-life-ring"></use>
-                  </svg>
-                  <strong>Model Testing</strong>
-                </h4>
-                <p>I have used the below technologies for develop the UI:</p>
-                <ul class="description">
-                  <li><a href="#" title="WebSlides Components">HTML</a>.</li>
-                  <li><a href="#" title="WebSlides Classes">CSS</a></li>
-                  <li><a href="#" title="WebSlides Media">Python</a></li>
-                  <li><a href="#" title="WebSlides Media">flask</a></li>
-                </ul>
-              </div>             
-              <div class="column">
-                <img alt="Thumbnail Why WebSlides?" src="UI/Model_Test.JPG" style="width: 100%;">
+              <center> <img alt="Thumbnail Why WebSlides?" src="UI/Model_Test_Yes.JPG" style="width: 60%;"></center>
             </div>
             <!--end .grid -->
           </div>
-        </section>
-        <section>
-          <div class="wrap">
-            <div class="">
-              <h4>
-                <svg class="fa-life-ring">
-                  <use xlink:href="#fa-life-ring"></use>
-                </svg>
-                <strong>Conclusion and Future Directions</strong>
-              </h4>
-              <p>Conclusion:</p>
-              <ul class="description">
-                <li><a href="#" title="WebSlides Components">Age, chest pain type, and thalachh are strong predictors for heart disease.</a></li>
-              </ul>
-              <p>Future Work:</p>
-                <ul class="description">
-                  <li><a href="#" title="WebSlides Components">Explore additional models like Random Forests or SVM.</a></li>
-                  <li><a href="#" title="WebSlides Components">Consider feature engineering and hyperparameter tuning for improved accuracy.</a></li>
-                </ul>              
-            <!--end .grid -->
+      </section>
+      <section>
+        <div class="grid aligncenter">
+          <h2><strong>Recommendation to Stakeholders</strong></h2>
+        </div>
+        <hr>  
+        <div class="grid aligncenter">
+          <center><img src="EDA/Recommendation.png" alt="Agenda" style="width: 60%;"></center>
+        </div>
+        </div>
+      </section>
+      <section>
+        <div class="grid aligncenter">
+          <h2><strong>Future Work</strong></h2>
+        </div>
+        <hr>  
+        <div class="grid aligncenter">
+          <center><img src="EDA/Future_work.png" alt="Agenda" style="width: 60%;"></center>
+        </div>
+      </section>
+      <section>
+        <div class="grid aligncenter">
+          <h2><strong>Conclusion</strong></h2>
+        </div>
+        <hr>  
+        <div class="grid aligncenter">
+          <center><img src="EDA/Conclusion.png" alt="Agenda" style="width: 50%;"></center>
+        </div>
+      </section>
+      <section class="aligncenter">
+        <!-- .wrap = container (width: 90%) -->
+        <div class="wrap">
+          <h2><strong>Any Questions?</strong> </h2>
+        </div>
+        <!-- .end .wrap -->
+      </section>
+      <section class="slide-bottom">
+        <div class="wrap">
+          <div class="content-right text-serif">
+            <h2>
+              <strong>Thanks.</strong>
+            </h2>
+            <p>Thanks for watching the presentation</p>
+            <p>Best,<br> <a href="https://www.linkedin.com/in/forhad-hossain-aba82a123/">Forhad Hossain</a></p>
           </div>
-        </section>
-        <section class="aligncenter">
-          <!-- .wrap = container (width: 90%) -->
-          <div class="wrap">
-            <h2><strong>Any Questions?</strong> </h2>           
-          </div>
-          <!-- .end .wrap -->
-        </section>
-        <section class="slide-bottom">
-          <div class="wrap">
-            <div class="content-right text-serif">
-              <h2>
-                <strong>Thanks.</strong>                
-              </h2>
-              <p>Thanks for watching the presentation</p> 
-              <p>Best,<br> <a href="https://www.linkedin.com/in/forhad-hossain-aba82a123/">Forhad Hossain</a></p>
-            </div>
-            <!-- .end .content-right -->
-          </div>
-          <!-- .end .wrap -->
-        </section>      
+        </div>
+      </section>
+    </article>
+  </main>
 
-      </article>
-      <!-- end article -->
-    </main>
-    <!-- end main -->
+  <!-- A global footer -->
 
-   <!-- A global footer
-
-     <footer role="contentinfo">
+     <!-- <footer role="contentinfo">
       <div class="wrap">
         <p>An <a href="https://github.com/webslides/webslides">open source solution</a>, by <a href="https://twitter.com/webslides">@webslides</a>.</p>
       </div>
     </footer>  -->
 
-    <!-- Required -->
-    <script src="static/js/webslides.js"></script>
-    <script>
-      window.ws = new WebSlides();
-    </script>
+  <!-- Required -->
+  <script src="static/js/webslides.js"></script>
+  <script>
+    window.ws = new WebSlides();
+  </script>
 
-    <!-- OPTIONAL - svg-icons.js (fontastic.me - Font Awesome as svg icons) -->
-    <script defer src="static/js/svg-icons.js"></script>
+  <!-- OPTIONAL - svg-icons.js (fontastic.me - Font Awesome as svg icons) -->
+  <script defer src="static/js/svg-icons.js"></script>
 
-  </body>
+</body>
+
 </html>
